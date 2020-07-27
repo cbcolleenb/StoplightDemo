@@ -21,23 +21,23 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/fruit"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "id": 1,
+                      "name": "apple",
+                      "color": "red"
+                    }
+                  }
                 }
               }
             }
           }
         },
         "operationId": "get-getFruit",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "null"
-              },
-              "examples": {}
-            }
-          }
-        },
-        "description": "get fruit by id"
+        "description": "get fruit by id",
+        "parameters": []
       },
       "parameters": [
         {
@@ -68,7 +68,13 @@
                 "$ref": "#/components/schemas/fruit"
               },
               "examples": {
-                "example-1": {}
+                "example-1": {
+                  "value": {
+                    "id": 1,
+                    "name": "apple",
+                    "color": "red"
+                  }
+                }
               }
             },
             "application/xml": {
