@@ -1,12 +1,16 @@
 {
   "title": "QualificationRqmt",
   "type": "object",
+  "x-examples": {
+    "example-1": {}
+  },
   "properties": {
     "id": {
       "type": "integer"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "example": "Rqmt 1"
     },
     "Fruits": {
       "type": "array",

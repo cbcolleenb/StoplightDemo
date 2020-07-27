@@ -66,6 +66,24 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/fruit"
+              },
+              "examples": {
+                "example-1": {}
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "examples": {
+                "example-1": {}
               }
             }
           }
@@ -88,13 +106,16 @@
         },
         "properties": {
           "id": {
-            "type": "integer"
+            "type": "integer",
+            "example": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "example": "banana"
           },
           "color": {
-            "type": "string"
+            "type": "string",
+            "example": "yellow"
           }
         }
       }
