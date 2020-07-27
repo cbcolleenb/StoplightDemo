@@ -1,0 +1,18 @@
+{
+  "title": "QualificationRqmt",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Fruits": {
+      "type": "array",
+      "items": {
+        "$ref": "../fruits.v1.json#/components/schemas/fruit"
+      }
+    }
+  }
+}
