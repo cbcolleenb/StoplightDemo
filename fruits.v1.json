@@ -1,0 +1,103 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "fruits",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/getFruit/{id}": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/fruit"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-getFruit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "null"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "description": "get fruit by id"
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "id",
+          "in": "path",
+          "description": "fruit id",
+          "required": true
+        }
+      ]
+    },
+    "/addFruit": {
+      "post": {
+        "summary": "",
+        "operationId": "post-addFruit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "add fruit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/fruit"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "fruit": {
+        "title": "fruit",
+        "type": "object",
+        "description": "fruit description",
+        "x-examples": {
+          "example-1": {
+            "id": 1,
+            "name": "apple",
+            "color": "red"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
